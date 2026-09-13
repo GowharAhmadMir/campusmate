@@ -12,578 +12,576 @@
 
 <body>
 
-<div class="app">
+    <div class="app">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
 
-        <div class="logo">
-            🎓 CampusMate
-        </div>
-
-        <nav>
-
-            <a href="#" class="nav-link active" data-page="dashboard">
-                🏠 Dashboard
-            </a>
-
-            <a href="#" class="nav-link" data-page="subjects">
-                📚 Subjects
-            </a>
-
-            <a href="#" class="nav-link" data-page="notes">
-                📝 Notes
-            </a>
-
-            <a href="#" class="nav-link" data-page="assignments">
-                ✅ Assignments
-            </a>
-
-            <a href="#" class="nav-link" data-page="timer">
-                ⏱️ Focus Timer
-            </a>
-
-            <a href="#" class="nav-link" data-page="expenses">
-                💰 Expenses
-            </a>
-
-        </nav>
-
-        <div class="sidebar-bottom">
-            <a href="#" class="nav-link" data-page="settings">
-                ⚙️ Settings
-            </a>
-        </div>
-
-    </aside>
-
-
-    <!-- Main -->
-    <main class="main">
-
-        <!-- Header -->
-        <header class="header">
-
-            <div>
-                <p class="small-text" id="currentDate"></p>
-
-                <h1 id="pageTitle">
-                    Good afternoon, Student 👋
-                </h1>
+            <div class="logo">
+                🎓 CampusMate
             </div>
 
-            <div class="profile">
-                👨‍💻
+            <nav>
+
+                <a href="#" class="nav-link active" data-page="dashboard">
+                    🏠 Dashboard
+                </a>
+
+                <a href="#" class="nav-link" data-page="subjects">
+                    📚 Subjects
+                </a>
+
+                <a href="#" class="nav-link" data-page="notes">
+                    📝 Notes
+                </a>
+
+                <a href="#" class="nav-link" data-page="assignments">
+                    ✅ Assignments
+                </a>
+
+                <a href="#" class="nav-link" data-page="timer">
+                    ⏱️ Focus Timer
+                </a>
+
+                <a href="#" class="nav-link" data-page="expenses">
+                    💰 Expenses
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link" data-page="settings">
+                    ⚙️ Settings
+                </a>
+
             </div>
 
-        </header>
+        </aside>
 
 
-        <!-- Content -->
-        <section id="content">
+        <!-- MAIN CONTENT -->
+        <main class="main">
 
-            <!-- Dashboard -->
+            <!-- HEADER -->
+            <header class="header">
 
-            <div class="page" id="dashboard">
+                <div>
 
-                <section class="welcome">
+                    <p class="small-text" id="currentDate"></p>
 
-                    <div>
+                    <h1 id="pageTitle">
+                        Good afternoon, Student 👋
+                    </h1>
 
-                        <h2>Ready to study?</h2>
+                </div>
 
-                        <p>
-                            Stay focused, manage your tasks,
-                            and reach your academic goals.
-                        </p>
+                <div class="profile">
+                    👨‍💻
+                </div>
 
-                        <button onclick="startStudy()">
-                            Start Studying →
+            </header>
+
+
+            <!-- ALL PAGES -->
+            <section id="content">
+
+
+                <!-- ================= DASHBOARD ================= -->
+
+                <div class="page" id="dashboard">
+
+                    <section class="welcome">
+
+                        <div>
+
+                            <h2>
+                                Ready to study?
+                            </h2>
+
+                            <p>
+                                Stay focused, manage your tasks,
+                                and reach your academic goals.
+                            </p>
+
+                            <button onclick="startStudy()">
+                                Start Studying →
+                            </button>
+
+                        </div>
+
+                        <div class="welcome-icon">
+                            📖
+                        </div>
+
+                    </section>
+
+
+                    <!-- STAT CARDS -->
+
+                    <section class="stats">
+
+                        <div class="card">
+
+                            <span>📚</span>
+
+                            <h3 id="subjectCount">
+                                0
+                            </h3>
+
+                            <p>
+                                Subjects
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <span>📝</span>
+
+                            <h3 id="assignmentCount">
+                                0
+                            </h3>
+
+                            <p>
+                                Assignments
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <span>⏱️</span>
+
+                            <h3>
+                                12h
+                            </h3>
+
+                            <p>
+                                Study Time
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <span>🎯</span>
+
+                            <h3 id="progressCount">
+                                0%
+                            </h3>
+
+                            <p>
+                                Progress
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- DASHBOARD GRID -->
+
+                    <section class="dashboard-grid">
+
+
+                        <!-- ASSIGNMENTS -->
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <h2>
+                                    Upcoming Assignments
+                                </h2>
+
+                                <a href="#"
+                                   onclick="openPage('assignments')">
+                                    View all
+                                </a>
+
+                            </div>
+
+                            <div id="dashboardAssignments">
+
+                                <!-- JavaScript will add assignments -->
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SCHEDULE -->
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <h2>
+                                    Today's Schedule
+                                </h2>
+
+                            </div>
+
+
+                            <div class="schedule">
+
+                                <div class="time">
+
+                                    <strong>
+                                        10:00
+                                    </strong>
+
+                                    <span>
+                                        AM
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Web Development
+                                    </h3>
+
+                                    <p>
+                                        HTML & CSS
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="schedule">
+
+                                <div class="time">
+
+                                    <strong>
+                                        01:00
+                                    </strong>
+
+                                    <span>
+                                        PM
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Database
+                                    </h3>
+
+                                    <p>
+                                        SQL Practice
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="schedule">
+
+                                <div class="time">
+
+                                    <strong>
+                                        04:00
+                                    </strong>
+
+                                    <span>
+                                        PM
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        JavaScript
+                                    </h3>
+
+                                    <p>
+                                        React Basics
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- ================= SUBJECTS ================= -->
+
+                <div class="page hidden" id="subjects">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <h2>
+                                📚 My Subjects
+                            </h2>
+
+                            <p class="section-description">
+                                Track your academic progress.
+                            </p>
+
+                        </div>
+
+                        <button onclick="addSubject()">
+                            + Add Subject
                         </button>
 
                     </div>
 
-                    <div class="welcome-icon">
-                        📖
+
+                    <div id="subjectList"
+                         class="subject-grid">
+
+                        <!-- Subjects created by JavaScript -->
+
                     </div>
 
-                </section>
+                </div>
 
 
-                <section class="stats">
 
-                    <div class="card">
-                        <span>📚</span>
-                        <h3>5</h3>
-                        <p>Subjects</p>
+                <!-- ================= NOTES ================= -->
+
+                <div class="page hidden" id="notes">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <h2>
+                                📝 My Notes
+                            </h2>
+
+                            <p class="section-description">
+                                Create and manage your study notes.
+                            </p>
+
+                        </div>
+
+                        <button onclick="addNote()">
+                            + New Note
+                        </button>
+
                     </div>
 
-                    <div class="card">
-                        <span>📝</span>
-                        <h3>8</h3>
-                        <p>Assignments</p>
+
+                    <!-- SEARCH -->
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="noteSearch"
+                            placeholder="🔍 Search notes..."
+                        >
+
                     </div>
 
-                    <div class="card">
-                        <span>⏱️</span>
-                        <h3>12h</h3>
-                        <p>Study Time</p>
+
+                    <!-- NOTES -->
+
+                    <div id="notesList"
+                         class="notes-grid">
+
+                        <!-- Notes created by JavaScript -->
+
                     </div>
 
-                    <div class="card">
-                        <span>🎯</span>
-                        <h3>78%</h3>
-                        <p>Progress</p>
+                </div>
+
+
+
+                <!-- ================= ASSIGNMENTS ================= -->
+
+                <div class="page hidden" id="assignments">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <h2>
+                                ✅ My Assignments
+                            </h2>
+
+                            <p class="section-description">
+                                Keep track of your college work.
+                            </p>
+
+                        </div>
+
+                        <button onclick="addAssignment()">
+                            + Add Assignment
+                        </button>
+
                     </div>
 
-                </section>
-
-
-                <section class="dashboard-grid">
 
                     <div class="panel">
 
-                        <div class="panel-header">
+                        <div id="assignmentList">
 
-                            <h2>Upcoming Assignments</h2>
+                            <!-- Assignments created by JavaScript -->
 
-                            <a href="#">
-                                View all
-                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TIMER ================= -->
+
+                <div class="page hidden" id="timer">
+
+                    <div class="timer-container">
+
+                        <h2>
+                            ⏱️ Focus Timer
+                        </h2>
+
+                        <div id="timerDisplay">
+                            25:00
+                        </div>
+
+
+                        <div class="timer-buttons">
+
+                            <button onclick="startTimer()">
+                                Start
+                            </button>
+
+                            <button onclick="pauseTimer()">
+                                Pause
+                            </button>
+
+                            <button onclick="resetTimer()">
+                                Reset
+                            </button>
 
                         </div>
 
 
-                        <div class="assignment">
+                        <p>
+                            Focus for 25 minutes,
+                            then take a short break.
+                        </p>
 
-                            <div>
-                                <h3>Database Management</h3>
-                                <p>ER Diagram Project</p>
-                            </div>
+                    </div>
 
-                            <span class="due">
-                                Tomorrow
-                            </span>
-
-                        </div>
+                </div>
 
 
-                        <div class="assignment">
 
-                            <div>
-                                <h3>Web Development</h3>
-                                <p>Responsive Portfolio</p>
-                            </div>
+                <!-- ================= EXPENSES ================= -->
 
-                            <span class="due">
-                                3 days
-                            </span>
+                <div class="page hidden" id="expenses">
 
-                        </div>
+                    <div class="page-heading">
 
+                        <div>
 
-                        <div class="assignment">
+                            <h2>
+                                💰 My Expenses
+                            </h2>
 
-                            <div>
-                                <h3>Operating Systems</h3>
-                                <p>Process Scheduling</p>
-                            </div>
-
-                            <span class="due">
-                                5 days
-                            </span>
+                            <p class="section-description">
+                                Track your daily spending.
+                            </p>
 
                         </div>
+
+                        <button onclick="addExpense()">
+                            + Add Expense
+                        </button>
+
+                    </div>
+
+
+                    <div class="expense-total">
+
+                        <p>
+                            Total this month
+                        </p>
+
+                        <h2 id="expenseTotal">
+                            ₹0
+                        </h2>
 
                     </div>
 
 
                     <div class="panel">
 
-                        <div class="panel-header">
+                        <div id="expenseList">
 
-                            <h2>Today's Schedule</h2>
-
-                        </div>
-
-
-                        <div class="schedule">
-
-                            <div class="time">
-                                <strong>10:00</strong>
-                                <span>AM</span>
-                            </div>
-
-                            <div>
-                                <h3>Web Development</h3>
-                                <p>HTML & CSS</p>
-                            </div>
+                            <!-- Expenses created by JavaScript -->
 
                         </div>
-
-
-                        <div class="schedule">
-
-                            <div class="time">
-                                <strong>01:00</strong>
-                                <span>PM</span>
-                            </div>
-
-                            <div>
-                                <h3>Database</h3>
-                                <p>SQL Practice</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="schedule">
-
-                            <div class="time">
-                                <strong>04:00</strong>
-                                <span>PM</span>
-                            </div>
-
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>React Basics</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-
-            <!-- Subjects -->
-
-            <div class="page hidden" id="subjects">
-
-                <div class="page-heading">
-                    <h2>📚 My Subjects</h2>
-
-                    <button onclick="addSubject()">
-                        + Add Subject
-                    </button>
-                </div>
-
-
-                <div class="subject-grid">
-
-                    <div class="subject-card">
-                        <span>🌐</span>
-                        <h3>Web Development</h3>
-                        <p>Progress: 85%</p>
-
-                        <div class="progress">
-                            <div style="width: 85%"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="subject-card">
-                        <span>🗄️</span>
-                        <h3>Database Management</h3>
-                        <p>Progress: 70%</p>
-
-                        <div class="progress">
-                            <div style="width: 70%"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="subject-card">
-                        <span>💻</span>
-                        <h3>Operating Systems</h3>
-                        <p>Progress: 60%</p>
-
-                        <div class="progress">
-                            <div style="width: 60%"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="subject-card">
-                        <span>⚡</span>
-                        <h3>JavaScript</h3>
-                        <p>Progress: 75%</p>
-
-                        <div class="progress">
-                            <div style="width: 75%"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Notes -->
-
-            <div class="page hidden" id="notes">
-
-                <div class="page-heading">
-
-                    <h2>📝 My Notes</h2>
-
-                    <button onclick="addNote()">
-                        + New Note
-                    </button>
-
-                </div>
-
-
-                <div class="notes-grid">
-
-                    <div class="note-card">
-
-                        <h3>JavaScript Basics</h3>
-
-                        <p>
-                            Variables, functions,
-                            arrays and objects.
-                        </p>
-
-                        <small>
-                            Updated today
-                        </small>
-
-                    </div>
-
-
-                    <div class="note-card">
-
-                        <h3>SQL Commands</h3>
-
-                        <p>
-                            SELECT, INSERT,
-                            UPDATE and DELETE.
-                        </p>
-
-                        <small>
-                            Updated yesterday
-                        </small>
-
-                    </div>
-
-
-                    <div class="note-card">
-
-                        <h3>CSS Flexbox</h3>
-
-                        <p>
-                            Flexbox properties
-                            and responsive layouts.
-                        </p>
-
-                        <small>
-                            Updated 3 days ago
-                        </small>
 
                     </div>
 
                 </div>
 
-            </div>
 
 
-            <!-- Assignments -->
+                <!-- ================= SETTINGS ================= -->
 
-            <div class="page hidden" id="assignments">
+                <div class="page hidden" id="settings">
 
-                <div class="page-heading">
+                    <div class="panel settings-panel">
 
-                    <h2>✅ Assignments</h2>
+                        <h2>
+                            ⚙️ Settings
+                        </h2>
 
-                    <button onclick="addAssignment()">
-                        + Add Assignment
-                    </button>
+                        <br>
 
-                </div>
+                        <label class="setting-option">
 
+                            <input
+                                type="checkbox"
+                                id="darkMode"
+                            >
 
-                <div class="panel">
+                            <span>
+                                🌙 Dark Mode
+                            </span>
 
-                    <div class="assignment">
-
-                        <div>
-                            <h3>Database ER Diagram</h3>
-                            <p>Database Management</p>
-                        </div>
-
-                        <span class="due">
-                            Tomorrow
-                        </span>
-
-                    </div>
-
-
-                    <div class="assignment">
-
-                        <div>
-                            <h3>Portfolio Website</h3>
-                            <p>Web Development</p>
-                        </div>
-
-                        <span class="due">
-                            3 days
-                        </span>
-
-                    </div>
-
-
-                    <div class="assignment">
-
-                        <div>
-                            <h3>OS Process Scheduling</h3>
-                            <p>Operating Systems</p>
-                        </div>
-
-                        <span class="due">
-                            5 days
-                        </span>
+                        </label>
 
                     </div>
 
                 </div>
 
-            </div>
+
+            </section>
+
+        </main>
+
+    </div>
 
 
-            <!-- Timer -->
+    <!-- JAVASCRIPT -->
 
-            <div class="page hidden" id="timer">
-
-                <div class="timer-container">
-
-                    <h2>⏱️ Focus Timer</h2>
-
-                    <div id="timerDisplay">
-                        25:00
-                    </div>
-
-                    <div class="timer-buttons">
-
-                        <button onclick="startTimer()">
-                            Start
-                        </button>
-
-                        <button onclick="pauseTimer()">
-                            Pause
-                        </button>
-
-                        <button onclick="resetTimer()">
-                            Reset
-                        </button>
-
-                    </div>
-
-                    <p>
-                        Focus for 25 minutes,
-                        then take a short break.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Expenses -->
-
-            <div class="page hidden" id="expenses">
-
-                <div class="page-heading">
-
-                    <h2>💰 Expenses</h2>
-
-                    <button onclick="addExpense()">
-                        + Add Expense
-                    </button>
-
-                </div>
-
-
-                <div class="expense-total">
-
-                    <p>Total this month</p>
-
-                    <h2>₹2,450</h2>
-
-                </div>
-
-
-                <div class="panel">
-
-                    <div class="assignment">
-
-                        <div>
-                            <h3>🍔 Food</h3>
-                            <p>Today</p>
-                        </div>
-
-                        <strong>₹180</strong>
-
-                    </div>
-
-
-                    <div class="assignment">
-
-                        <div>
-                            <h3>🚌 Transport</h3>
-                            <p>Yesterday</p>
-                        </div>
-
-                        <strong>₹60</strong>
-
-                    </div>
-
-
-                    <div class="assignment">
-
-                        <div>
-                            <h3>📚 Books</h3>
-                            <p>Sep 10</p>
-                        </div>
-
-                        <strong>₹450</strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Settings -->
-
-            <div class="page hidden" id="settings">
-
-                <div class="panel">
-
-                    <h2>⚙️ Settings</h2>
-
-                    <br>
-
-                    <label>
-                        <input type="checkbox" id="darkMode">
-                        Dark Mode
-                    </label>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
